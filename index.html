@@ -518,12 +518,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid #e9b0b8;outline-offset:3
     <div class="tk-col tk-right">
       <div class="price">$33</div>
       <div class="per">One dollar an audio. AUD.</div>
-      <p class="add-h">Add to your order</p>
-      <label class="addon">
-        <input type="checkbox" data-k="um" data-p="7">
-        <span class="sw"></span>
-        <span class="ad-txt"><b>Unmuted <i class="ad-pr">+$7</i></b><span>Short form content that sells. Video training plus your reusable Content Dashboard.</span></span>
-      </label>
+      <p class="add-h">Want it personal?</p>
       <label class="addon vn">
         <input type="checkbox" data-k="vm" data-p="97">
         <span class="sw"></span>
@@ -629,7 +624,7 @@ w.onclick=function(e){if(!a.duration)return;var r=w.getBoundingClientRect();a.cu
 
 // add-ons: update total, button and checkout link
 (function(){
-  var LINKS={'':'#CHECKOUT-OTR','um':'#CHECKOUT-OTR-UNMUTED','vm':'#CHECKOUT-OTR-VOICENOTE','um+vm':'#CHECKOUT-OTR-UNMUTED-VOICENOTE'};
+  var LINKS={'':'#CHECKOUT-OTR','vm':'#CHECKOUT-OTR-VOICENOTE'};
   var boxes=document.querySelectorAll('.addon input'),tot=document.getElementById('otrTot'),btn=document.getElementById('otrBuy');
   function upd(){var t=33,k=[];boxes.forEach(function(b){if(b.checked){t+=+b.dataset.p;k.push(b.dataset.k)}});
     tot.textContent='$'+t;btn.textContent='Get Access \u00b7 $'+t;btn.href=LINKS[k.join('+')]}
